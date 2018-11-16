@@ -6,6 +6,12 @@ import 'element-ui/lib/theme-chalk/index.css';
 import App from './App'
 import router from './router'
 
+import https from "./utils/axios.js"; //引入封装的axios  
+Vue.prototype.https = https; //引入到原型上。
+
+// 引入mockjs
+require('./utils/mock.js')
+
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 
